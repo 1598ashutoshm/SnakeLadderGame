@@ -25,6 +25,8 @@ public class SnakeLadder {
 				     break;					
 			}
 		}
+		    if(position>100)
+		    	position-=diceroll;
 		    
 		System.out.println("Player Position:" + position);
 		}
