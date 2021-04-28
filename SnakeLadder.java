@@ -7,28 +7,27 @@ public class SnakeLadder {
 		
 		
 		int position=0;
-		int diceroll=(int) Math.floor(Math.random() * 10) % 6;
-		System.out.println(diceroll);
-		position+=diceroll;
-		int option=(int) Math.floor(Math.random() * 10) % 3;
-		System.out.println(option);
-		if(diceroll==option) {
-			switch (option) {
-			case ladder:
-				position+=diceroll;
-				break;
-			case snake:
-				position-=diceroll;
-				break;
-			default:
-				break;				
-				
+		while(position<100) {
+			int diceroll=(int) Math.floor(Math.random() * 10) % 6 + 1;
+		    System.out.println(diceroll);
+		    position+=diceroll;
+		    int option=(int) Math.floor(Math.random() * 10) % 3;
+		    System.out.println(option);
+		    if(diceroll==option) {
+		    	switch (option) {
+		    	case ladder:
+				     position+=diceroll;
+				     break;
+			    case snake:
+				     position-=diceroll;
+				     break;
+			    default:
+				     break;					
 			}
 		}
+		    
 		System.out.println("Player Position:" + position);
+		}
 		
-		
-	
 	}
-
 }
