@@ -7,12 +7,14 @@ public class SnakeLadder {
 		
 		
 		int position=0;
+		int count=0;
 		while(position<100) {
 			int diceroll=(int) Math.floor(Math.random() * 10) % 6 + 1;
-		    System.out.println(diceroll);
+			count=count+1;
+		    //System.out.println(diceroll);
 		    position+=diceroll;
 		    int option=(int) Math.floor(Math.random() * 10) % 3;
-		    System.out.println(option);
+		    //System.out.println(option);
 		    if(diceroll==option) {
 		    	switch (option) {
 		    	case ladder:
@@ -28,8 +30,9 @@ public class SnakeLadder {
 		    if(position>100)
 		    	position-=diceroll;
 		    
-		System.out.println("Player Position:" + position);
+		//System.out.println("Player Position:" + position + ',' +  "NoofTimesDIcePlayed" + count);
 		}
+		System.out.println("Player Position:" + position + ',' +  "NoofTimesDIcePlayed" + count);
 		
 	}
 }
